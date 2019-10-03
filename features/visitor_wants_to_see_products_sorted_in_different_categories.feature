@@ -7,6 +7,7 @@ Feature: Visitor can see products sorted in different categories
     Given the following products exist
       |title      |content    | price | category |
       |Lasagna    |It is good | 100   | Main     |
+      |Lasagna 2.0|It is good | 100   | Main     |
       |Apple pie  |It is tasty| 200   | Dessert  |
       |Salad      |It is green| 300   | Starter  |
 

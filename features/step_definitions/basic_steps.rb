@@ -1,9 +1,9 @@
 Given("the following products exist") do |table|
   table.hashes.each do |table|
-    Category.find_or_create_by(name: table[:category])
-    binding.pry
+    category = Category.find_or_create_by(name: table[:category])
+    table.except!("category")
     
-    FactoryBot.create(:product, table)
+    FactoryBot.create(:product, table.merge(category: category))
   end
 end
 
