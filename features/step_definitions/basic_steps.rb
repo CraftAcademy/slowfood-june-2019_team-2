@@ -4,7 +4,7 @@ Given("the following product exist") do |table|
   end
 end
 
-When("I'm on the landing page") do
+When("I am on the landing page") do
   visit root_path
 end
 
@@ -14,4 +14,8 @@ Given("the following products exist") do |table|
     product.except!('category')
     FactoryBot.create( :product, product.merge(category: category))
   end
+end
+
+Then("Stop") do
+  binding.pry
 end

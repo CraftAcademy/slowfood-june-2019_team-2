@@ -6,13 +6,17 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', data: {'turbolinks-track' => 'reload'}
     = javascript_include_tag 'application', data: {'turbolinks-track' => 'reload'}
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato|Slabo+13px", :rel => "stylesheet"}/
   %body
     %main
     %header
       %nav
         #left
-          %p#name Better than next door
+          %h3#name Better Than Next Door
         #center
         #right
           %button#login_button Login
     = yield
+
+.footer
+  %p Phone: 555-555-5555 | Serving Bowls of Happiness
