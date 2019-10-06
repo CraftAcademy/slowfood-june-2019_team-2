@@ -1,7 +1,9 @@
-Feature: Visitor views list of categorized products
+@javascript
+Feature: Visitor can add to order
+
   As a visitor,
-  In order to choose product more easily
-  I would like to see the products sorted in categories
+  In order to select products I want to buy
+  I would like to be able to add products to an order
 
   Background:
     Given the following products exist
@@ -11,10 +13,6 @@ Feature: Visitor views list of categorized products
       | Salad              | tomatoes, leafs             | 10    | Starters  |
     And I'm on the landing page
 
-  Scenario: Successfully
-    Then I should see "Starters"
-    And I should see "Salad"
-    And I should see "Entrees"
-    And I should see "Swedish meatballs"
-    And I should see "Desserts"
-    And I should see "Apple pie"
+  Scenario: Visitor can add products to cart
+    When I click "Add to cart" on "Salad"
+    Then I should see "1 item"
